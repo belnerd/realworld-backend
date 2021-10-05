@@ -9,7 +9,7 @@ build-job:
     - docker image tag realworld_backend eu.gcr.io/studentjamk/realworld_backend
 
 push-job:
-  stage: push
+  stage: build
   tags:
     - realworld-runner
   script:
