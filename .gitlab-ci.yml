@@ -7,5 +7,11 @@ build-job:
     - echo "Building backend image.."
     - docker build -t realworld_backend .
     - docker image tag realworld_backend eu.gcr.io/studentjamk/realworld_backend
+
+push-job:
+  stage: push
+  tags:
+    - realworld-runner
+  script:
     - echo "Pushing image to GCR.."
     - docker image push eu.gcr.io/studentjamk/realworld_backend
